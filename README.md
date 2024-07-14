@@ -4,7 +4,14 @@ source .venv/Scripts/activate
 mkdocs serve
 ```
 
+## mkdocs getting-started
+https://www.mkdocs.org/getting-started/
+
 ## mkdocs-material
 
 ### Color
 https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=weather+night#primary-color
+
+## 参考になりそうなyaml
+
+https://github.com/fereria/mkdocs_sample/blob/main/mkdocs.yml
