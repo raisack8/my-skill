@@ -1,0 +1,30 @@
+site_name: My skill
+site_description: My skill
+site_author: raisack
+site_url: http://rinatz.github.io/python-book
+repo_name: rinatz/python-book
+repo_url: https://github.com/rinatz/python-book
+copyright: Copyright &copy 2024 raisack
+
+nav:
+  - Home: index.md
+  - About: about.md
+theme:
+  name: material
+  palette:
+    # ライトモード
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: ダークモードに切り替え
+    # ダークモード
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: ライトモードに切り替え
