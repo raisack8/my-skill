@@ -2,7 +2,7 @@ site_name: My skill
 site_description: My skill
 site_author: raisack
 # TODO: 追々公開する必要？
-site_url: http://raisack8.github.io/my-skill
+site_url: https://raisack8.github.io/my-skill/
 repo_name: raisack8/my-skill
 repo_url: https://github.com/raisack8/my-skill
 copyright: Copyright &copy 2024 raisack
@@ -45,26 +45,24 @@ markdown_extensions:
   - meta
 
 nav:
-  - ホーム: about.md
+  - ホーム: home.md
   # 各々のmdを作る必要がある
   - Python: 
-    - FastAPI: py-fastapi-01.md
-    - Django: index.md
-    - pytest: index.md
-    - subprocess: index.md
-    - pathlib: index.md
-    - mkdocs: index.md
+    - FastAPI: python/py-fastapi-01.md
+    - Django: python/py-django-01.md
+    - pytest: python/py-pytest-01.md
+    - subprocess: python/py-subpro-01.md
+    - pathlib: python/py-pathlib-01.md
+    - mkdocs: python/py-mkdocs-01.md
   - React:
-    - Hooks: index.md
-  - bat:
-    - Hooks: index.md
-  - PostgreSQL:
-    - Hooks: index.md
-  - AWS:
-    - Hooks: index.md
-  - GCP:
-    - Hooks: index.md
+    - セットアップ: react/re-first-01.md
+    - Hooks: react/re-hooks-01.md
+  - bat: bat-01.md
+  - PostgreSQL: psql-01.md
+  - AWS: aws-first-01.md
+  - GCP: gcp-first-01.md
   - Stable Diffusion:
-    - prompt: index.md
+    - 基本的な使い方: stablediffusion/sd-first-01.md
+    - プロンプト: stablediffusion/sd-prompt-01.md
   - ハック:
-    - prompt: index.md
+    - VSCODE: hack-vscode-01.md
