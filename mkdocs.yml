@@ -47,8 +47,8 @@ markdown_extensions:
 nav:
   - ホーム: about.md
   # 各々のmdを作る必要がある
-  - Python:
-    - FastAPI: index.md
+  - Python: 
+    - FastAPI: py-fastapi-01.md
     - Django: index.md
     - pytest: index.md
     - subprocess: index.md
