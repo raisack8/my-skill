@@ -1,22 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>http://raisack8.github.io/my-skill/</loc>
+         <loc>https://raisack8.github.io/my-skill/aws-first-01/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://raisack8.github.io/my-skill/about/</loc>
+         <loc>https://raisack8.github.io/my-skill/bat-01/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://raisack8.github.io/my-skill/index-2/</loc>
+         <loc>https://raisack8.github.io/my-skill/gcp-first-01/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://raisack8.github.io/my-skill/py-fastapi-01/</loc>
+         <loc>https://raisack8.github.io/my-skill/hack-vscode-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/home/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/psql-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/python/py-django-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/python/py-fastapi-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/python/py-mkdocs-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/python/py-pathlib-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/python/py-pytest-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/python/py-subpro-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/react/re-first-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/react/re-hooks-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/stablediffusion/sd-first-01/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/stablediffusion/sd-prompt-01/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
