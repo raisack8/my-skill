@@ -45,8 +45,7 @@ markdown_extensions:
   - meta
 
 nav:
-  - ホーム: home.md
-  # 各々のmdを作る必要がある
+  - ホーム: index.md
   - Python: 
     - FastAPI: python/py-fastapi-01.md
     - Django: python/py-django-01.md
