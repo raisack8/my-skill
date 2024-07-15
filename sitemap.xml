@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://raisack8.github.io/my-skill/</loc>
+         <lastmod>2024-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://raisack8.github.io/my-skill/aws-first-01/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
@@ -17,11 +22,6 @@
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/hack-vscode-01/</loc>
-         <lastmod>2024-07-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://raisack8.github.io/my-skill/home/</loc>
          <lastmod>2024-07-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
