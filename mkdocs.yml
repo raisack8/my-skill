@@ -65,3 +65,4 @@ nav:
     - プロンプト: stablediffusion/sd-prompt-01.md
   - ハック(準備中):
     - VSCODE: hack-vscode-01.md
+  - ネットワーク: network/network.md
