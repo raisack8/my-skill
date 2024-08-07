@@ -53,13 +53,13 @@ nav:
     - subprocess(準備中): python/py-subpro-01.md
     - pathlib(準備中): python/py-pathlib-01.md
     - mkdocs(準備中): python/py-mkdocs-01.md
+  - GCP: gcp-first-01.md
   - React(準備中):
     - セットアップ: react/re-first-01.md
     - Hooks: react/re-hooks-01.md
   - bat(準備中): bat-01.md
   - PostgreSQL(準備中): psql-01.md
   - AWS(準備中): aws-first-01.md
-  - GCP(準備中): gcp-first-01.md
   - Stable Diffusion(準備中):
     - 基本的な使い方: stablediffusion/sd-first-01.md
     - プロンプト: stablediffusion/sd-prompt-01.md
