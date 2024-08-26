@@ -49,19 +49,19 @@ nav:
   - Python: 
     - FastAPI: python/py-fastapi-01.md
     - Django: python/py-django-01.md
-    - pytest(準備中): python/py-pytest-01.md
-    - subprocess(準備中): python/py-subpro-01.md
-    - pathlib(準備中): python/py-pathlib-01.md
-    - mkdocs(準備中): python/py-mkdocs-01.md
+    # - pytest(準備中): python/py-pytest-01.md
+    # - subprocess(準備中): python/py-subpro-01.md
+    # - pathlib(準備中): python/py-pathlib-01.md
+    # - mkdocs(準備中): python/py-mkdocs-01.md
   - GCP: gcp-first-01.md
   - Next.js / React:
     - はじめに: nextjs/ne-first.md
-  - bat(準備中): bat-01.md
-  - PostgreSQL(準備中): psql-01.md
-  - AWS(準備中): aws-first-01.md
-  - Stable Diffusion(準備中):
-    - 基本的な使い方: stablediffusion/sd-first-01.md
-    - プロンプト: stablediffusion/sd-prompt-01.md
-  - ハック(準備中):
-    - VSCODE: hack-vscode-01.md
+  # - bat(準備中): bat-01.md
+  # - PostgreSQL(準備中): psql-01.md
+  # - AWS(準備中): aws-first-01.md
+  # - Stable Diffusion(準備中):
+  #   - 基本的な使い方: stablediffusion/sd-first-01.md
+  #   - プロンプト: stablediffusion/sd-prompt-01.md
+  # - ハック(準備中):
+  #   - VSCODE: hack-vscode-01.md
   - ネットワーク: network/network.md
