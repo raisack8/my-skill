@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://raisack8.github.io/my-skill/gcp-first-01/">
       
       
-        <link rel="prev" href="../aws-first-01/">
+        <link rel="prev" href="../python/py-mkdocs-01/">
       
       
-        <link rel="next" href="../stablediffusion/sd-first-01/">
+        <link rel="next" href="../nextjs/ne-first/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>GCP(準備中) - My skill</title>
+        <title>GCP - My skill</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GCP(準備中)
+              GCP
             
           </span>
         </div>
@@ -442,6 +442,36 @@
       
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    GCP
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -452,24 +482,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    React(準備中)
+    Next.js / React
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            React(準備中)
+            Next.js / React
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -480,32 +510,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../react/re-first-01/" class="md-nav__link">
+      <a href="../nextjs/ne-first/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    セットアップ
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../react/re-hooks-01/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hooks
+    はじめに
   </span>
   
 
@@ -578,36 +587,6 @@
   
 
       </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    GCP(準備中)
-  </span>
-  
-
-      </a>
-      
     </li>
   
 
@@ -759,6 +738,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network/network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ネットワーク
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -796,6 +795,148 @@
 
 
 <h1 id="gcp">GCP<a class="headerlink" href="#gcp" title="Permanent link">&para;</a></h1>
+<h1 id="sheet-api">Sheet API<a class="headerlink" href="#sheet-api" title="Permanent link">&para;</a></h1>
+<p>プロジェクトを作成<br />
+↓<br />
+Google Sheet APIを有効にする<br />
+↓<br />
+「APIとサービスを有効にする」をクリック<br />
+↓<br />
+Google Drive APIを有効にする  </p>
+<p>認証情報<br />
+↓<br />
+認証情報を作成<br />
+↓<br />
+サービスアカウントを作成<br />
+↓<br />
+ロール:「基本」&gt;「編集者」<br />
+↓<br />
+先ほど作ったユーザーの「キー」&gt;「新しい鍵を作成」&gt; JsonでDL</p>
+<p>JsonをPythonのワークディレクトリに入れておく</p>
+<div class="highlight"><pre><span></span><code>pip install gspread
+pip install gspread-formatting
+</code></pre></div>
+<p>ドライブにフォルダを作り、DriveのURLの後ろの部分を控えておく<br />
+jsonのclient_emailをコピー<br />
+ドライブのフォルダを共有&gt;先ほどのアドレスを追加、ロールは編集者で共有  </p>
+<p><strong>シートの作成</strong> 
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gspread</span>
+
+<span class="c1"># GCPのクライアント</span>
+<span class="n">gc</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">service_account</span><span class="p">(</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;spread-sheet.json&quot;</span>
+<span class="p">)</span>
+<span class="c1"># スプレッドシートオブジェクト</span>
+<span class="n">sh</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="s2">&quot;sheat_name&quot;</span><span class="p">,</span> <span class="c1"># ファイル名</span>
+    <span class="n">folder_id</span> <span class="o">=</span> <span class="s2">&quot;DriveのフォルダID&quot;</span>
+<span class="p">)</span>
+<span class="c1"># 一つ目のシートを取得　</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">update_acell</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">,</span> <span class="mi">2014</span><span class="p">)</span>
+
+<span class="c1"># → 「sheet_name」というスプレッドシートができ、A1に「2014」が書かれている</span>
+</code></pre></div></p>
+<p><strong>シートの読み込み</strong> 
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gspread</span>
+
+<span class="c1"># GCPのクライアント</span>
+<span class="n">gc</span> <span class="o">=</span> <span class="n">gspread</span><span class="o">.</span><span class="n">service_account</span><span class="p">(</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s2">&quot;spread-sheet.json&quot;</span>
+<span class="p">)</span>
+<span class="c1"># スプレッドシートオブジェクト</span>
+<span class="n">sh</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
+    <span class="s2">&quot;sheat_name&quot;</span><span class="p">,</span> <span class="c1"># ファイル名</span>
+    <span class="n">folder_id</span> <span class="o">=</span> <span class="s2">&quot;DriveのフォルダID&quot;</span>
+<span class="p">)</span>
+<span class="c1"># 一つ目のシートを取得　</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="s2">&quot;Sheet_name&quot;</span><span class="p">)</span> <span class="c1"># シート名を指定</span>
+<span class="n">number</span> <span class="o">=</span> <span class="p">[[</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">100</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">raige</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">)]</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">range_name</span><span class="o">=</span><span class="s2">&quot;A1:B100&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">numbers</span><span class="p">)</span>
+<span class="c1"># → 既存のシートに値を書き込む</span>
+</code></pre></div>
+pandasを使うとよりDataFrameをそのまま使える
+<div class="highlight"><pre><span></span><code><span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="s2">&quot;Sheet_name&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;名前&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;斎藤&quot;</span><span class="p">,</span> <span class="s2">&quot;山田&quot;</span><span class="p">,</span> <span class="s2">&quot;田中&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;年齢&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">56</span><span class="p">]</span>
+<span class="p">})</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()]</span> <span class="c1"># カラム名の多重リスト</span>
+    <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="c1"># 各行のデータの多重リスト</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># シートの内容を全て削除</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>シートの読み込み</strong> 
+<div class="highlight"><pre><span></span><code><span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="s2">&quot;Sheet_name&quot;</span><span class="p">)</span> <span class="c1"># シート名を指定</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">acell</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="c1"># セルを指定して値を取得</span>
+
+<span class="n">row_2</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">row_values</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 2行目のデータを全て取得</span>
+<span class="n">col_2</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">col_values</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># 2列目のデータを全て取得</span>
+
+<span class="n">all_values</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_all_values</span><span class="p">()</span> <span class="c1"># 全てのデータを取得</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ws</span><span class="o">.</span><span class="n">get_all_record</span><span class="p">())</span> <span class="c1"># シートのデータをDataFrameで取得</span>
+</code></pre></div></p>
+<p><strong>シートの追加</strong> 
+<div class="highlight"><pre><span></span><code><span class="n">sh</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
+    <span class="s2">&quot;sheat_name&quot;</span><span class="p">,</span> <span class="c1"># ファイル名</span>
+    <span class="n">folder_id</span> <span class="o">=</span> <span class="s2">&quot;DriveのフォルダID&quot;</span>
+<span class="p">)</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;シートのタイトル&quot;</span><span class="p">,</span>
+    <span class="n">rows</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+    <span class="n">cols</span><span class="o">=</span><span class="mi">20</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<p><strong>シートの削除</strong> 
+<div class="highlight"><pre><span></span><code><span class="n">sh</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
+    <span class="s2">&quot;sheat_name&quot;</span><span class="p">,</span> <span class="c1"># ファイル名</span>
+    <span class="n">folder_id</span> <span class="o">=</span> <span class="s2">&quot;DriveのフォルダID&quot;</span>
+<span class="p">)</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="s2">&quot;シートのタイトル&quot;</span><span class="p">)</span>
+<span class="n">sh</span><span class="o">.</span><span class="n">del_worksheet</span><span class="p">(</span><span class="n">ws</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>書式の変更</strong> 
+<div class="highlight"><pre><span></span><code><span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="s2">&quot;シートのタイトル&quot;</span><span class="p">)</span>
+<span class="c1"># A1:B1の文字がbold</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;A1:B1&quot;</span><span class="p">,{</span>
+    <span class="s2">&quot;textFormat&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;bold&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="c1"># A1:B1の文字がboldで、フォントサイズが15で、中央寄せ</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;A1:B1&quot;</span><span class="p">,{</span>
+    <span class="s2">&quot;textFormat&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;bold&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;fontSize&quot;</span><span class="p">:</span> <span class="mi">15</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;horizontalAlignment&quot;</span><span class="p">:</span> <span class="s2">&quot;CENTER&quot;</span> <span class="c1"># 左寄せ: LEFT, 右寄せ: RIGHT</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<p><strong>罫線を引く</strong> 
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">gspread</span>
+<span class="kn">from</span> <span class="nn">gspread_formatting</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Border</span><span class="p">,</span> <span class="n">Color</span><span class="p">,</span> <span class="n">CellFormat</span><span class="p">,</span> <span class="n">Borders</span><span class="p">,</span> <span class="n">format_cell_range</span>
+<span class="p">)</span>
+
+<span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="s2">&quot;シートのタイトル&quot;</span><span class="p">)</span>
+<span class="c1"># 罫線の種類を定義する: 実線, 赤, 太さ1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Border</span><span class="p">(</span><span class="s2">&quot;SOLID&quot;</span><span class="p">,</span> <span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># どのような罫線を引くか: 上下左右</span>
+<span class="n">fmt</span> <span class="o">=</span> <span class="n">CellFormat</span><span class="p">(</span>
+    <span class="n">borders</span><span class="o">=</span><span class="n">Borders</span><span class="p">(</span>
+        <span class="n">top</span><span class="o">=</span><span class="n">b</span><span class="p">,</span>
+        <span class="n">botton</span><span class="o">=</span><span class="n">b</span><span class="p">,</span>
+        <span class="n">left</span><span class="o">=</span><span class="n">b</span><span class="p">,</span>
+        <span class="n">right</span><span class="o">=</span><span class="n">b</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="c1"># どこに罫線を引くか</span>
+<span class="n">format_cell_rangfe</span><span class="p">(</span><span class="n">ws</span><span class="p">,</span> <span class="s2">&quot;A1:B1&quot;</span><span class="p">,</span> <span class="n">fmt</span><span class="p">)</span>
+</code></pre></div></p>
 
 
 
