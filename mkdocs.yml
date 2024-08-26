@@ -49,20 +49,30 @@ nav:
   - Python: 
     - FastAPI: python/py-fastapi-01.md
     - Django: python/py-django-01.md
-    - pytest(準備中): python/py-pytest-01.md
-    - subprocess(準備中): python/py-subpro-01.md
-    - pathlib(準備中): python/py-pathlib-01.md
-    - mkdocs(準備中): python/py-mkdocs-01.md
+    # - pytest(準備中): python/py-pytest-01.md
+    # - subprocess(準備中): python/py-subpro-01.md
+    # - pathlib(準備中): python/py-pathlib-01.md
+    # - mkdocs(準備中): python/py-mkdocs-01.md
   - GCP: gcp-first-01.md
-  - React(準備中):
-    - セットアップ: react/re-first-01.md
-    - Hooks: react/re-hooks-01.md
-  - bat(準備中): bat-01.md
-  - PostgreSQL(準備中): psql-01.md
-  - AWS(準備中): aws-first-01.md
-  - Stable Diffusion(準備中):
-    - 基本的な使い方: stablediffusion/sd-first-01.md
-    - プロンプト: stablediffusion/sd-prompt-01.md
-  - ハック(準備中):
-    - VSCODE: hack-vscode-01.md
+  - Javascript:
+    - Next.js:
+      - はじめに: JS/nextjs/ne-first.md
+      - 特徴: JS/nextjs/ne-about.md
+      - レイアウトとページ: JS/nextjs/ne-pages.md
+      - DBの設定: JS/nextjs/ne-db.md
+      - レンダリング: JS/nextjs/ne-render.md
+      - 検索: JS/nextjs/ne-search.md
+      - エラーハンドリング: JS/nextjs/ne-error.md
+      - 認証: JS/nextjs/ne-auth.md
+      - Vercel: JS/nextjs/ne-vercle.md
+    - TypeScript:
+      - 例: JS/type-script/ts-first.md
+  # - bat(準備中): bat-01.md
+  # - PostgreSQL(準備中): psql-01.md
+  # - AWS(準備中): aws-first-01.md
+  # - Stable Diffusion(準備中):
+  #   - 基本的な使い方: stablediffusion/sd-first-01.md
+  #   - プロンプト: stablediffusion/sd-prompt-01.md
+  # - ハック(準備中):
+  #   - VSCODE: hack-vscode-01.md
   - ネットワーク: network/network.md
