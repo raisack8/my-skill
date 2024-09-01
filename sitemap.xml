@@ -31,11 +31,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/JS/TypeScript/ts-first/</loc>
-         <lastmod>2024-09-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://raisack8.github.io/my-skill/JS/nextjs/ne-about/</loc>
          <lastmod>2024-09-01</lastmod>
          <changefreq>daily</changefreq>
@@ -62,6 +57,11 @@
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/JS/nextjs/ne-vercle/</loc>
+         <lastmod>2024-09-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/JS/type-script/ts-first/</loc>
          <lastmod>2024-09-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
