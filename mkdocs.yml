@@ -61,6 +61,7 @@ nav:
       - レイアウトとページ: JS/nextjs/ne-pages.md
       - DBの設定: JS/nextjs/ne-db.md
       - レンダリング: JS/nextjs/ne-render.md
+      - 検索: JS/nextjs/ne-search.md
       - Vercel: JS/nextjs/ne-vercle.md
     - TypeScript:
       - 例: JS/type-script/ts-first.md

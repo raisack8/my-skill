@@ -67,7 +67,7 @@ export default function Loading() {
 特定のコンポーネントのみでストリーミングを行っている。
 ![alt text](images/loading4.png)
 
-### Suspense
+### Suspenseフォールバック
 `<Suspense>` を使うことで、子要素が読み込みを完了するまでフォールバックを表示させることができます。
 
 ```js
@@ -129,3 +129,32 @@ export default async function CardWrapper() {
 1. ページのストリーミング中にユーザーにどのようにページを体験してもらいたいか。
 2. 優先したいコンテンツ。
 3. コンポーネントがデータ取得に依存している場合。
+
+## 部分的な事前レンダリング
+
+以下の設定にてPPRが有効になり、パフォーマンス向上がみられることもある。  
+[Partial prerendering: Building towards a new default rendering model for web applications](https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model)
+
+[参考資料: PPR - pre-rendering新時代の到来とSSR/SSG論争の終焉](https://zenn.dev/akfm/articles/nextjs-partial-pre-rendering)
+
+**next.config.mjs**
+```js
+/** @type {import('next').NextConfig} */
+ 
+const nextConfig = {
+  experimental: {
+    ppr: 'incremental',
+  },
+};
+ 
+export default nextConfig;
+```
+
+**/app/dashboard/layout.tsx**
+```js
+import SideNav from '@/app/ui/dashboard/sidenav';
+ 
+export const experimental_ppr = true;
+ 
+// ...
+```
