@@ -18,7 +18,7 @@
         <link rel="prev" href="../ne-db/">
       
       
-        <link rel="next" href="../ne-vercle/">
+        <link rel="next" href="../ne-search/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -620,7 +620,7 @@
           <li class="md-nav__item">
   <a href="#suspense" class="md-nav__link">
     <span class="md-ellipsis">
-      Suspense
+      Suspenseフォールバック
     </span>
   </a>
   
@@ -649,10 +649,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      部分的な事前レンダリング
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ne-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    検索
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ne-error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    エラーハンドリング
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -842,7 +893,7 @@
           <li class="md-nav__item">
   <a href="#suspense" class="md-nav__link">
     <span class="md-ellipsis">
-      Suspense
+      Suspenseフォールバック
     </span>
   </a>
   
@@ -866,6 +917,15 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       サスペンスの境界線をどこに置くか
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      部分的な事前レンダリング
     </span>
   </a>
   
@@ -944,7 +1004,7 @@ Cookie や URL 検索パラメータなど、<br />
 ページ全体をストリーミングしたら読み込みが完了しているコンポーネントも表示されなくなっているので<br />
 特定のコンポーネントのみでストリーミングを行っている。
 <img alt="alt text" src="../images/loading4.png" /></p>
-<h3 id="suspense">Suspense<a class="headerlink" href="#suspense" title="Permanent link">&para;</a></h3>
+<h3 id="suspense">Suspenseフォールバック<a class="headerlink" href="#suspense" title="Permanent link">&para;</a></h3>
 <p><code>&lt;Suspense&gt;</code> を使うことで、子要素が読み込みを完了するまでフォールバックを表示させることができます。</p>
 <p><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">Suspense</span><span class="w"> </span><span class="nx">fallback</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Loading</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">}</span><span class="o">&gt;</span>
 <span class="w">  </span><span class="o">&lt;</span><span class="nx">SomeComponent</span><span class="w"> </span><span class="o">/&gt;</span>
@@ -997,6 +1057,28 @@ Cookie や URL 検索パラメータなど、<br />
 <li>優先したいコンテンツ。</li>
 <li>コンポーネントがデータ取得に依存している場合。</li>
 </ol>
+<h2 id="_7">部分的な事前レンダリング<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>以下の設定にてPPRが有効になり、パフォーマンス向上がみられることもある。<br />
+<a href="https://vercel.com/blog/partial-prerendering-with-next-js-creating-a-new-default-rendering-model">Partial prerendering: Building towards a new default rendering model for web applications</a></p>
+<p><a href="https://zenn.dev/akfm/articles/nextjs-partial-pre-rendering">参考資料: PPR - pre-rendering新時代の到来とSSR/SSG論争の終焉</a></p>
+<p><strong>next.config.mjs</strong>
+<div class="highlight"><pre><span></span><code><span class="cm">/** @type {import(&#39;next&#39;).NextConfig} */</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">nextConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">experimental</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ppr</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;incremental&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">nextConfig</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>/app/dashboard/layout.tsx</strong>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">SideNav</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/app/ui/dashboard/sidenav&#39;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">experimental_ppr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+</code></pre></div></p>
 
 
 

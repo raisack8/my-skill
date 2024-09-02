@@ -598,6 +598,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      動的ルートセグメント
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -640,6 +649,48 @@
   
   <span class="md-ellipsis">
     レンダリング
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ne-search/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    検索
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ne-error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    エラーハンドリング
   </span>
   
 
@@ -853,6 +904,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      動的ルートセグメント
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -941,6 +1001,26 @@
 → App Router のすべてのコンポーネントがサーバー コンポーネントであり、これらの API は利用できないため<br />
 → importすると、子にも影響があるため、わざわざ各コンポーネントで宣言する必要はない。  </p>
 <p><a href="https://nextjs.org/docs/app/building-your-application/rendering/client-components#using-client-components-in-nextjs">Using Client Components in Next.js</a></p>
+<h2 id="_7">動的ルートセグメント<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>例えば、URLにユーザーのIDをセットしてリクエストする場合を考える。</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">Link</span>
+<span class="w">    </span><span class="nx">href</span><span class="o">=</span><span class="p">{</span><span class="sb">`/dashboard/invoices/</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">/edit`</span><span class="p">}</span>
+<span class="w">    </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;rounded-md border p-2 hover:bg-gray-100&quot;</span>
+<span class="w">    </span><span class="o">&gt;</span>
+</code></pre></div>
+<p>このように<code>Link</code>コンポーネントに<code>href</code>を設定して、アクセスする。<br />
+すると、下記のようなディレクトリ構造下にある<code>page.tsx</code>に移動する。</p>
+<p><img alt="alt text" src="../images/pages.png" /></p>
+<p><code>page.tsx</code>では以下のようにして<code>[id]</code>の値を受け取ることができる。</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Form</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/app/ui/invoices/edit-form&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Breadcrumbs</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/app/ui/invoices/breadcrumbs&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">fetchCustomers</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@/app/lib/data&#39;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">Page</span><span class="p">({</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
