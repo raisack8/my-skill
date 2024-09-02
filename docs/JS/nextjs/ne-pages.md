@@ -89,3 +89,32 @@ export default function NavLinks() {
 → importすると、子にも影響があるため、わざわざ各コンポーネントで宣言する必要はない。  
 
 [Using Client Components in Next.js](https://nextjs.org/docs/app/building-your-application/rendering/client-components#using-client-components-in-nextjs)
+
+## 動的ルートセグメント
+
+例えば、URLにユーザーのIDをセットしてリクエストする場合を考える。
+
+```js
+<Link
+    href={`/dashboard/invoices/${id}/edit`}
+    className="rounded-md border p-2 hover:bg-gray-100"
+    >
+```
+
+このように`Link`コンポーネントに`href`を設定して、アクセスする。  
+すると、下記のようなディレクトリ構造下にある`page.tsx`に移動する。
+
+![alt text](images/pages.png)
+
+`page.tsx`では以下のようにして`[id]`の値を受け取ることができる。
+
+```ts
+import Form from '@/app/ui/invoices/edit-form';
+import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
+import { fetchCustomers } from '@/app/lib/data';
+ 
+export default async function Page({ params }: { params: { id: string } }) {
+  const id = params.id;
+  // ...
+}
+```
