@@ -63,6 +63,7 @@ nav:
       - レンダリング: JS/nextjs/ne-render.md
       - 検索: JS/nextjs/ne-search.md
       - エラーハンドリング: JS/nextjs/ne-error.md
+      - 認証: JS/nextjs/ne-auth.md
       - Vercel: JS/nextjs/ne-vercle.md
     - TypeScript:
       - 例: JS/type-script/ts-first.md
