@@ -46,14 +46,6 @@ markdown_extensions:
 
 nav:
   - ホーム: index.md
-  - Python: 
-    - FastAPI: python/py-fastapi-01.md
-    - Django: python/py-django-01.md
-    # - pytest(準備中): python/py-pytest-01.md
-    # - subprocess(準備中): python/py-subpro-01.md
-    # - pathlib(準備中): python/py-pathlib-01.md
-    # - mkdocs(準備中): python/py-mkdocs-01.md
-  - GCP: gcp-first-01.md
   - Javascript:
     - Next.js:
       - はじめに: JS/nextjs/ne-first.md
@@ -67,6 +59,17 @@ nav:
       - Vercel: JS/nextjs/ne-vercle.md
     - TypeScript:
       - 例: JS/type-script/ts-first.md
+    - Prisma:
+      - 使い方: JS/prisma/pr-01.md
+  - Python: 
+    - FastAPI: python/py-fastapi-01.md
+    - Django: python/py-django-01.md
+    # - pytest(準備中): python/py-pytest-01.md
+    # - subprocess(準備中): python/py-subpro-01.md
+    # - pathlib(準備中): python/py-pathlib-01.md
+    # - mkdocs(準備中): python/py-mkdocs-01.md
+  - GCP: gcp-first-01.md
+
   # - bat(準備中): bat-01.md
   # - PostgreSQL(準備中): psql-01.md
   # - AWS(準備中): aws-first-01.md
