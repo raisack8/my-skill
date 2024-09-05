@@ -12,13 +12,13 @@
         <meta name="author" content="raisack">
       
       
-        <link rel="canonical" href="https://raisack8.github.io/my-skill/JS/nextjs/ne-error/">
+        <link rel="canonical" href="https://raisack8.github.io/my-skill/JS/nextjs/ne-env/">
       
       
-        <link rel="prev" href="../ne-search/">
+        <link rel="prev" href="../ne-auth/">
       
       
-        <link rel="next" href="../ne-auth/">
+        <link rel="next" href="../ne-vercle/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>エラーハンドリング - My skill</title>
+        <title>環境構築 - My skill</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              エラーハンドリング
+              環境構築
             
           </span>
         </div>
@@ -474,28 +474,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    エラーハンドリング
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ne-error/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -504,60 +486,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      すべてのエラー
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#404-not-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      404 Not Found [デフォルト]
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#404-not-found_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      404 Not Found [オリジナル]
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
-    <span class="md-ellipsis">
-      inputなどの下にエラーメッセージを出すとき
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -588,10 +516,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ne-env/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    環境構築
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -600,6 +546,66 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      環境構築
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="環境構築">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      composeファイル作成
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      接続設定
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
+    <span class="md-ellipsis">
+      DBマイグレーション
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -920,36 +926,42 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      すべてのエラー
+      環境構築
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="環境構築">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      composeファイル作成
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#404-not-found" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      404 Not Found [デフォルト]
+      接続設定
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#404-not-found_1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#db" class="md-nav__link">
     <span class="md-ellipsis">
-      404 Not Found [オリジナル]
+      DBマイグレーション
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
-    <span class="md-ellipsis">
-      inputなどの下にエラーメッセージを出すとき
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -971,86 +983,79 @@
   
 
 
-  <h1>エラーハンドリング</h1>
+  <h1>環境構築</h1>
 
-<h2 id="_1">すべてのエラー<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><code>page.tsx</code>と同じ階層に<code>error.tsx</code>を配置することで、<br />
-全てのエラーをキャッチすることができる。</p>
-<div class="highlight"><pre><span></span><code><span class="s1">&#39;use client&#39;</span><span class="p">;</span>
+<h2 id="_1">環境構築<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="compose">composeファイル作成<a class="headerlink" href="#compose" title="Permanent link">&para;</a></h3>
+<p>ここでは<code>Next.js</code>と<code>PostgreSQL</code>を<code>docker-compose</code>にてビルドしてみる。<br />
+docker-composeファイル等の例は<a href="https://github.com/vercel/next.js/tree/canary/examples/with-docker-compose#how-to-use">こちら</a>を参照
+<div class="highlight"><pre><span></span><code>pnpm<span class="w"> </span>create<span class="w"> </span>next-app<span class="w"> </span>--example<span class="w"> </span>with-docker-compose<span class="w"> </span>with-docker-compose-app
+</code></pre></div></p>
+<p>docker-compose.yamlにPostgresの環境を加える。
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3&quot;</span>
 
-<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">next-app</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">next-app</span>
+<span class="w">    </span><span class="c1"># ~~~~</span>
+<span class="w">    </span><span class="nt">networks</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my_network</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
 
-<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="ne">Error</span><span class="p">({</span>
-<span class="w">  </span><span class="nx">error</span><span class="p">,</span>
-<span class="w">  </span><span class="nx">reset</span><span class="p">,</span>
-<span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="ne">Error</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">digest</span><span class="o">?:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">};</span>
-<span class="w">  </span><span class="nx">reset</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="ow">void</span><span class="p">;</span>
-<span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Optionally log the error to an error reporting service</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
-<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="nx">error</span><span class="p">]);</span>
+<span class="w">  </span><span class="c1"># Add more containers below (nginx, postgres, etc.)</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./app/db/postgresql/data:/var/lib/postgresql/data</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./app/db/postgres:/docker-entrypoint-initdb.d</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5432:5432&quot;</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_USER=postgres</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_PASSWORD=postgres</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSTGRES_INITDB_ARGS=--encoding=UTF-8 --locale=C</span>
 
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="nx">main</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;flex h-full flex-col items-center justify-center&quot;</span><span class="o">&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nx">h2</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;text-center&quot;</span><span class="o">&gt;</span><span class="nx">Something</span><span class="w"> </span><span class="nx">went</span><span class="w"> </span><span class="nx">wrong</span><span class="o">!&lt;</span><span class="err">/h2&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nx">button</span>
-<span class="w">        </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400&quot;</span>
-<span class="w">        </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{</span>
-<span class="w">          </span><span class="c1">// Attempt to recover by trying to re-render the invoices route</span>
-<span class="w">          </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">reset</span><span class="p">()</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="o">&gt;</span>
-<span class="w">        </span><span class="nx">Try</span><span class="w"> </span><span class="nx">again</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="err">/main&gt;</span>
-<span class="w">  </span><span class="p">);</span>
-<span class="p">}</span>
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">postgres_data</span><span class="p">:</span>
+<span class="c1"># Define a network, which allows containers to communicate</span>
+<span class="c1"># with each other, by using their container name as a hostname</span>
+<span class="nt">networks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">my_network</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">external</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div></p>
+<p>デプロイ
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a network, which allows containers to communicate</span>
+<span class="c1"># with each other, by using their container name as a hostname</span>
+docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>my_network
+
+<span class="c1"># Build dev</span>
+docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.dev.yml<span class="w"> </span>build
+
+<span class="c1"># Up dev</span>
+docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.dev.yml<span class="w"> </span>up
+</code></pre></div></p>
+<h3 id="_2">接続設定<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Prismaをインストール(<a href="/my-skill/JS/prisma/pr-01/">詳細はこちら</a>)
+<div class="highlight"><pre><span></span><code>pnpm install prisma --save-dev
+</code></pre></div></p>
+<p><strong>scheme.prisma</strong>
+<div class="highlight"><pre><span></span><code>generator client {
+  provider = &quot;prisma-client-js&quot;
+}
+
+datasource db {
+  provider = &quot;postgresql&quot;
+  url       = env(&quot;DATABASE_URL&quot;)
+}
+</code></pre></div></p>
+<p><strong>.env</strong>
+<div class="highlight"><pre><span></span><code>DATABASE_URL=&quot;postgresql://postgres:postgres@localhost:5432/db?schema=public&quot;
+</code></pre></div></p>
+<h3 id="db">DBマイグレーション<a class="headerlink" href="#db" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>pnpm<span class="w"> </span>prisma<span class="w"> </span>migrate<span class="w"> </span>dev<span class="w"> </span>--name<span class="w"> </span>first_migration
 </code></pre></div>
-<p><code>use client</code>: クライアント コンポーネントである必要があります。</p>
-<p><code>error</code>: JavaScriptのネイティブインスタンス</p>
-<p><code>reset</code>: エラー境界をリセットする関数。<br />
-実行すると、この関数はルートセグメントの再レンダリングを試みます。</p>
-<h2 id="404-not-found">404 Not Found [デフォルト]<a class="headerlink" href="#404-not-found" title="Permanent link">&para;</a></h2>
-<p><div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">notFound</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;next/navigation&#39;</span><span class="p">;</span>
-
-<span class="c1">// ...</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">invoice</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="nx">notFound</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre></div>
-<img alt="alt text" src="../images/notfound.png" /></p>
-<h2 id="404-not-found_1">404 Not Found [オリジナル]<a class="headerlink" href="#404-not-found_1" title="Permanent link">&para;</a></h2>
-<p><img alt="alt text" src="../images/notfound2.png" /></p>
-<p>画像のように<code>not-found.tsx</code>を配置する。</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Link</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;next/link&#39;</span><span class="p">;</span>
-<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">FaceFrownIcon</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@heroicons/react/24/outline&#39;</span><span class="p">;</span>
-
-<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">NotFound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="nx">main</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;flex h-full flex-col items-center justify-center gap-2&quot;</span><span class="o">&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nx">FaceFrownIcon</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;w-10 text-gray-400&quot;</span><span class="w"> </span><span class="o">/&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nx">h2</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;text-xl font-semibold&quot;</span><span class="o">&gt;</span><span class="mf">404</span><span class="w"> </span><span class="nx">Not</span><span class="w"> </span><span class="nx">Found</span><span class="o">&lt;</span><span class="err">/h2&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Could</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">find</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">requested</span><span class="w"> </span><span class="nx">invoice</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nx">Link</span>
-<span class="w">        </span><span class="nx">href</span><span class="o">=</span><span class="s2">&quot;/dashboard/invoices&quot;</span>
-<span class="w">        </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400&quot;</span>
-<span class="w">      </span><span class="o">&gt;</span>
-<span class="w">        </span><span class="nx">Go</span><span class="w"> </span><span class="nx">Back</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="err">/Link&gt;</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="err">/main&gt;</span>
-<span class="w">  </span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<p><img alt="alt text" src="../images/notfound3.png" /></p>
-<h2 id="input">inputなどの下にエラーメッセージを出すとき<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
-<p><img alt="alt text" src="../images/error1.png" /></p>
-<p>input側に<code>aria-describedby="customer-error"</code><br />
-エラーメッセージ要素側に<code>id="customer-error"</code>を記載すると、<br />
-要素とエラーメッセージコンテナーの関係が確立される。</p>
-<p><code>aria-live="polite"</code>: ユーザーがエラーを修正したとき、スクリーン リーダーはこれらの変更を通知しますが、ユーザーの邪魔にならないように、ユーザーがアイドル状態のときにのみ通知します。</p>
-<p><img alt="alt text" src="../images/error2.png" /></p>
+<p>これにて<code>localhost:5432</code>にてテーブルができていることが確認できる。</p>
 
 
 
