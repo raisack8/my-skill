@@ -9,6 +9,7 @@ copyright: Copyright &copy 2024 raisack
 
 theme:
   name: material
+  custom_dir: 'docs/overrides'
   palette:
     # ライトモード
     - media: "(prefers-color-scheme: light)"
@@ -26,7 +27,6 @@ theme:
       toggle:
         icon: material/weather-night
         name: ライトモードに切り替え
-
 markdown_extensions:
   - toc:
       permalink: true
@@ -46,22 +46,20 @@ markdown_extensions:
 
 nav:
   - ホーム: index.md
-  - Javascript:
+  - TypeScript:
     - Next.js:
-      - はじめに: JS/nextjs/ne-first.md
-      - 特徴: JS/nextjs/ne-about.md
-      - レイアウトとページ: JS/nextjs/ne-pages.md
-      - DBの設定(Vercel): JS/nextjs/ne-db.md
-      - レンダリング: JS/nextjs/ne-render.md
-      - 検索: JS/nextjs/ne-search.md
-      - エラーハンドリング: JS/nextjs/ne-error.md
-      - 認証: JS/nextjs/ne-auth.md
-      - 環境構築: JS/nextjs/ne-env.md
-      - Vercel: JS/nextjs/ne-vercle.md
-    - TypeScript:
-      - 例: JS/type-script/ts-first.md
+      - はじめに: ts/nextjs/ne-first.md
+      - 特徴: ts/nextjs/ne-about.md
+      - レイアウトとページ: ts/nextjs/ne-pages.md
+      - DBの設定(Vercel): ts/nextjs/ne-db.md
+      - レンダリング: ts/nextjs/ne-render.md
+      - 検索: ts/nextjs/ne-search.md
+      - エラーハンドリング: ts/nextjs/ne-error.md
+      - 認証: ts/nextjs/ne-auth.md
+      - 環境構築: ts/nextjs/ne-env.md
+      - Vercel: ts/nextjs/ne-vercle.md
     - Prisma:
-      - 使い方: JS/prisma/pr-01.md
+      - 使い方: ts/prisma/pr-01.md
   - Python: 
     - FastAPI: python/py-fastapi-01.md
     - Django: python/py-django-01.md
@@ -69,7 +67,13 @@ nav:
     # - subprocess(準備中): python/py-subpro-01.md
     # - pathlib(準備中): python/py-pathlib-01.md
     # - mkdocs(準備中): python/py-mkdocs-01.md
-  - GCP: gcp-first-01.md
+  - Docker: 
+    - はじめに: docker/dc-01.md
+    - Dockerfile: docker/dc-02.md
+  - GCP: gcp/gcp-first-01.md
+  - Figma: 
+    - 使い方: fg/fg-01.md
+    - コンポーネント: fg/fg-02.md
 
   # - bat(準備中): bat-01.md
   # - PostgreSQL(準備中): psql-01.md
