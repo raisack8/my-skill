@@ -91,6 +91,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://raisack8.github.io/my-skill/docker/dc-01/</loc>
+         <lastmod>2024-09-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/docker/dc-02/</loc>
+         <lastmod>2024-09-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://raisack8.github.io/my-skill/network/network/</loc>
          <lastmod>2024-09-05</lastmod>
          <changefreq>daily</changefreq>
