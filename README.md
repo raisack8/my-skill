@@ -26,3 +26,5 @@ https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=weather
 https://github.com/fereria/mkdocs_sample/blob/main/mkdocs.yml
 
 https://zenn.dev/mebiusbox/articles/81d977a72cee01
+
+https://rohancragg.co.uk/about/

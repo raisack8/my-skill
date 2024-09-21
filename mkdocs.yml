@@ -1,7 +1,6 @@
 site_name: My skill
 site_description: My skill
 site_author: raisack
-# TODO: 追々公開する必要？
 site_url: https://raisack8.github.io/my-skill/
 repo_name: raisack8/my-skill
 repo_url: https://github.com/raisack8/my-skill
@@ -9,7 +8,7 @@ copyright: Copyright &copy 2024 raisack
 
 theme:
   name: material
-  custom_dir: 'docs/overrides'
+  custom_dir: "theme/"
   palette:
     # ライトモード
     - media: "(prefers-color-scheme: light)"
