@@ -9,7 +9,6 @@ copyright: Copyright &copy 2024 raisack
 
 theme:
   name: material
-  custom_dir: 'docs/overrides'
   palette:
     # ライトモード
     - media: "(prefers-color-scheme: light)"
@@ -27,6 +26,13 @@ theme:
       toggle:
         icon: material/weather-night
         name: ライトモードに切り替え
+  social:
+    - type: 'og:title'
+      title: 'My skills'
+    - type: 'og:description'
+      description: 'This site documents the knowledge I have gained so far.'
+    - type: 'og:image'
+      image: 'https://raisack8.github.io/my-skill/resources/nextjs.png'
 markdown_extensions:
   - toc:
       permalink: true
