@@ -1,14 +1,3 @@
----
-title: My skill
-description: このサイトは私が今まで培ってきた知識をドキュメント化したものです
-hero: My skill
-date: 2020-02-04
-authors:
-    - raisack
-og_title: My skill
-og_image: theme/myskill_logo.png
----
-
 # ホーム
 
 このサイトは私が今まで培ってきた知識をドキュメント化したものです。
