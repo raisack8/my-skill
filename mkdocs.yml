@@ -8,7 +8,7 @@ copyright: Copyright &copy 2024 raisack
 
 theme:
   name: material
-  custom_dir: 'theme/'
+  custom_dir: "theme/"
   palette:
     # ライトモード
     - media: "(prefers-color-scheme: light)"
