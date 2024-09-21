@@ -1,6 +1,6 @@
 # ホーム
 
-ここでは今まで培ってきた知識を蓄積していきます。
+このサイトは私が今まで培ってきた知識をドキュメント化したものです。
 
 [![Next.js](images/nextjs.png)](/my-skill/ts/nextjs/ne-first)
 
