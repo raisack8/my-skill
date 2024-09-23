@@ -48,15 +48,19 @@ nav:
   - TypeScript:
     - Next.js:
       - はじめに: ts/nextjs/ne-first.md
-      - 特徴: ts/nextjs/ne-about.md
-      - レイアウトとページ: ts/nextjs/ne-pages.md
-      - DBの設定(Vercel): ts/nextjs/ne-db.md
-      - レンダリング: ts/nextjs/ne-render.md
-      - 検索: ts/nextjs/ne-search.md
-      - エラーハンドリング: ts/nextjs/ne-error.md
-      - 認証: ts/nextjs/ne-auth.md
-      - 環境構築: ts/nextjs/ne-env.md
-      - Vercel: ts/nextjs/ne-vercle.md
+      - チュートリアル: 
+        - 特徴: ts/nextjs/ne-about.md
+        - レイアウトとページ: ts/nextjs/ne-pages.md
+        - DBの設定(Vercel): ts/nextjs/ne-db.md
+        - レンダリング: ts/nextjs/ne-render.md
+        - 検索: ts/nextjs/ne-search.md
+        - エラーハンドリング: ts/nextjs/ne-error.md
+        - 認証: ts/nextjs/ne-auth.md
+        - 環境構築: ts/nextjs/ne-env.md
+        - Vercel: ts/nextjs/ne-vercle.md
+      - 実践:
+        - NextUI: ts/nextjs/practice/ne-01.md
+        - こんなときどうする: ts/nextjs/practice/ne-02.md
     - Prisma:
       - 使い方: ts/prisma/pr-01.md
   - Python: 
