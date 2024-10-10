@@ -46,6 +46,7 @@ markdown_extensions:
 nav:
   - ホーム: index.md
   - TypeScript:
+    - javascriptの歴史: ts/history.md
     - Next.js:
       - はじめに: ts/nextjs/ne-first.md
       - チュートリアル: 
