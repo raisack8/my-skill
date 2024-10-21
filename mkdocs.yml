@@ -67,6 +67,7 @@ nav:
   - Python: 
     - FastAPI: python/py-fastapi-01.md
     - Django: python/py-django-01.md
+    - Selenium: python/py-sele.md
     # - pytest(準備中): python/py-pytest-01.md
     # - subprocess(準備中): python/py-subpro-01.md
     # - pathlib(準備中): python/py-pathlib-01.md
@@ -88,3 +89,4 @@ nav:
   # - ハック(準備中):
   #   - VSCODE: hack-vscode-01.md
   - ネットワーク: network/network.md
+  - 良記事: books.md
