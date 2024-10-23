@@ -2,157 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://raisack8.github.io/my-skill/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://raisack8.github.io/my-skill/books/</loc>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/docker/dc-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/docker/dc-02/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/fg/fg-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/fg/fg-02/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/gcp/gcp-first-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/network/network/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/python/py-django-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/python/py-fastapi-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/python/py-mkdocs-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/python/py-pathlib-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/python/py-pytest-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/python/py-sele/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/python/py-subpro-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/stablediffusion/sd-first-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/stablediffusion/sd-prompt-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/history/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-about/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-auth/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-db/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-env/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-error/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-first/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-pages/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-render/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-search/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-vercle/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/practice/ne-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/nextjs/practice/ne-02/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/prisma/pr-01/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://raisack8.github.io/my-skill/ts/type-script/ts-first/</loc>
-         <lastmod>2024-10-21</lastmod>
+         <lastmod>2024-10-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
