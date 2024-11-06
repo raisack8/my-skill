@@ -62,8 +62,14 @@ nav:
       - 実践:
         - NextUI: ts/nextjs/practice/ne-01.md
         - こんなときどうする: ts/nextjs/practice/ne-02.md
-    - Prisma:
-      - 使い方: ts/prisma/pr-01.md
+    - ORM:
+      - Prisma:
+        - 使い方: ts/orm/prisma/pr-01.md
+      - Drizzle:
+        - クイックスタート: ts/orm/drizzle/dr-01.md
+    - Store:
+      - Redux:
+        - クイックスタート: ts/store/redux/rd-01.md
   - Python: 
     - FastAPI: python/py-fastapi-01.md
     - Django: python/py-django-01.md
