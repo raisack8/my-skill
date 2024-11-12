@@ -18,7 +18,7 @@
         <link rel="prev" href="../ne-01/">
       
       
-        <link rel="next" href="../../../orm/prisma/pr-01/">
+        <link rel="next" href="../../ne-useclient/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -751,6 +751,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      エラー発生事例
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -763,6 +772,48 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ne-useclient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    use client
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ne-useserver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    use server
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1427,6 +1478,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      エラー発生事例
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1480,6 +1540,18 @@
 <span class="w">  </span><span class="p">})}</span>
 <span class="p">)</span>
 </code></pre></div></p>
+<h2 id="_1">エラー発生事例<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Warning: A component was suspended by an uncached promise. Creating promises inside a Client Component or hook is not yet supported, except via a Suspense-compatible library or framework.</p>
+</blockquote>
+<div class="admonition worning">
+<p class="admonition-title">Worning</p>
+<p>"use client"が宣言されているのに、コンポーネントが<code>async</code>で呼ばれている。</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>コンポーネントの<code>async</code>を削除すれば解消。</p>
+</div>
 
 
 
