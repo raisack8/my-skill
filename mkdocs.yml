@@ -64,6 +64,7 @@ nav:
         - こんなときどうする: ts/nextjs/practice/ne-02.md
       - use client: ts/nextjs/ne-useclient.md
       - use server: ts/nextjs/ne-useserver.md
+      - NextAuth.js: ts/nextjs/auth/ne-auth-01.md
     - ORM:
       - Prisma:
         - 使い方: ts/orm/prisma/pr-01.md
