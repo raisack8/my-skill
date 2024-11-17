@@ -204,6 +204,21 @@ export default function ClientExample() {
 
 ```
 
+useSessionを使う場合には`SessionProvider`でラップしなくてはいけない。
+
+```typescript
+const ClientPage = async () => {
+  return (
+  <SessionProvider>
+    <ClientExample />
+  </SessionProvider>
+  );
+};
+
+export default ClientPage;
+
+```
+
 ### サーバーサイドでの使用法
 
 **page.tsx**
@@ -240,4 +255,104 @@ export default function SessionData({
   );
 }
 
+```
+
+## その他アプリ連携例
+
+```typescript
+export const config: NextAuthConfig = {
+  providers: [
+    // https://github.com/settings/apps
+    GitHub({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
+    // https://console.cloud.google.com/apis/credentials
+    Google({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET
+    }),
+    // https://developers.line.biz/console/
+    LINE({
+      clientId: process.env.LINE_CLIENT_ID,
+      clientSecret: process.env.LINE_CLIENT_SECRET,
+      checks: ["state"], // これがないとエラーになってしまう。
+    }),
+  ],
+  ...
+```
+
+## 各アプリで固有のIDを取得する方法
+
+`providers`の`profile`で値の微調整を行う。  
+その後、`jwt`->`session`と値が動くので、順に渡してあげる。  
+型変換は無理やり。  
+
+```typescript
+import NextAuth, { NextAuthConfig } from "next-auth"; 
+import Google from "next-auth/providers/google";
+import LINE from "next-auth/providers/line"
+import { User as NextAuthUser } from "next-auth";
+import { JWT } from "next-auth/jwt";
+
+interface ExtendedUser extends NextAuthUser {
+  provider?: "go" | "li"
+  rawId?: string;
+}
+
+export const config: NextAuthConfig = {
+  providers: [
+    // https://console.cloud.google.com/apis/credentials
+    Google({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET,
+      profile(profile) {
+        return {
+          provider: "go",
+          name: profile.name || profile.displayName,
+          email: profile.email,
+          image: profile.picture || profile.pictureUrl,
+          rawId: profile.sub  // ユーザー固有のID
+        };
+      },
+    }),
+    // https://developers.line.biz/console/
+    LINE({
+      clientId: process.env.LINE_CLIENT_ID!,
+      clientSecret: process.env.LINE_CLIENT_SECRET!,
+      profile(profile) {
+        return {
+          provider: "li",
+          name: profile.name || profile.displayName,
+          email: profile.email,
+          image: profile.picture || profile.pictureUrl,
+          rawId: profile.sub  // ユーザー固有のID
+        };
+      },
+      checks: ["pkce", "state"],
+    }),
+  ],
+  basePath: "/api/auth",
+  callbacks: {
+    async jwt({ token, user }: { token: JWT; user?: ExtendedUser }) {
+      if (user) {
+        token.id = user.id;
+        token.sub = user.rawId;
+        token.provider = user.provider;
+      }
+      return token;
+    },
+    async session({ session, token }){
+      if (token && session.user) {
+        if (token.provider && token.sub){
+          session.user.id = `${token.provider}_${token.sub}`
+        }
+      }
+      return session;
+    },
+  }
+}
+
+// page.tsx等では下記のものを使用してログイン情報を取得・削除する
+export const { handlers, auth, signIn, signOut } = NextAuth(config);
 ```
