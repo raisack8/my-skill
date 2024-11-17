@@ -913,6 +913,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      その他アプリ連携例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      各アプリで固有のIDを取得する方法
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1674,6 +1692,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      その他アプリ連携例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      各アプリで固有のIDを取得する方法
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1874,6 +1910,17 @@ AUTH_TWITTER_SECRET=
 <span class="w">  </span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>useSessionを使う場合には<code>SessionProvider</code>でラップしなくてはいけない。</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">ClientPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="nx">SessionProvider</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">ClientExample</span><span class="w"> </span><span class="o">/&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="err">/SessionProvider&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">ClientPage</span><span class="p">;</span>
+</code></pre></div>
 <h3 id="_7">サーバーサイドでの使用法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p><strong>page.tsx</strong></p>
 <div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">Page</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -1903,6 +1950,99 @@ AUTH_TWITTER_SECRET=
 <span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
 <span class="w">  </span><span class="p">);</span>
 <span class="p">}</span>
+</code></pre></div>
+<h2 id="_8">その他アプリ連携例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="kt">NextAuthConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="c1">// https://github.com/settings/apps</span>
+<span class="w">    </span><span class="nx">GitHub</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">clientId</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.GITHUB_ID</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">clientSecret</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.GITHUB_SECRET</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">    </span><span class="c1">// https://console.cloud.google.com/apis/credentials</span>
+<span class="w">    </span><span class="nx">Google</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">clientId</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.GOOGLE_ID</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">clientSecret</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.GOOGLE_SECRET</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">    </span><span class="c1">// https://developers.line.biz/console/</span>
+<span class="w">    </span><span class="nx">LINE</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">clientId</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.LINE_CLIENT_ID</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">clientSecret</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.LINE_CLIENT_SECRET</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">checks</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// これがないとエラーになってしまう。</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="p">...</span>
+</code></pre></div>
+<h2 id="id">各アプリで固有のIDを取得する方法<a class="headerlink" href="#id" title="Permanent link">&para;</a></h2>
+<p><code>providers</code>の<code>profile</code>で値の微調整を行う。<br />
+その後、<code>jwt</code>-&gt;<code>session</code>と値が動くので、順に渡してあげる。<br />
+型変換は無理やり。  </p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">NextAuth</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NextAuthConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;next-auth&quot;</span><span class="p">;</span><span class="w"> </span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Google</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;next-auth/providers/google&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">LINE</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;next-auth/providers/line&quot;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">NextAuthUser</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;next-auth&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">JWT</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;next-auth/jwt&quot;</span><span class="p">;</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ExtendedUser</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">NextAuthUser</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">provider</span><span class="o">?:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;li&quot;</span>
+<span class="w">  </span><span class="nx">rawId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="kt">NextAuthConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="c1">// https://console.cloud.google.com/apis/credentials</span>
+<span class="w">    </span><span class="nx">Google</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">clientId</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.GOOGLE_ID</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">clientSecret</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.GOOGLE_SECRET</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">profile</span><span class="p">(</span><span class="nx">profile</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">profile.name</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">profile</span><span class="p">.</span><span class="nx">displayName</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="kt">profile.email</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">image</span><span class="o">:</span><span class="w"> </span><span class="kt">profile.picture</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">profile</span><span class="p">.</span><span class="nx">pictureUrl</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">rawId</span><span class="o">:</span><span class="w"> </span><span class="kt">profile.sub</span><span class="w">  </span><span class="c1">// ユーザー固有のID</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">    </span><span class="c1">// https://developers.line.biz/console/</span>
+<span class="w">    </span><span class="nx">LINE</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">clientId</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.LINE_CLIENT_ID</span><span class="o">!</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">clientSecret</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.LINE_CLIENT_SECRET</span><span class="o">!</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">profile</span><span class="p">(</span><span class="nx">profile</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">provider</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;li&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">profile.name</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">profile</span><span class="p">.</span><span class="nx">displayName</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="kt">profile.email</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">image</span><span class="o">:</span><span class="w"> </span><span class="kt">profile.picture</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">profile</span><span class="p">.</span><span class="nx">pictureUrl</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">rawId</span><span class="o">:</span><span class="w"> </span><span class="kt">profile.sub</span><span class="w">  </span><span class="c1">// ユーザー固有のID</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">checks</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;pkce&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;state&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nx">basePath</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;/api/auth&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">callbacks</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="nx">jwt</span><span class="p">({</span><span class="w"> </span><span class="nx">token</span><span class="p">,</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="kt">JWT</span><span class="p">;</span><span class="w"> </span><span class="nx">user?</span><span class="o">:</span><span class="w"> </span><span class="kt">ExtendedUser</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">token</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">token</span><span class="p">.</span><span class="nx">sub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">rawId</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">token</span><span class="p">.</span><span class="nx">provider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">provider</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">token</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="k">async</span><span class="w"> </span><span class="nx">session</span><span class="p">({</span><span class="w"> </span><span class="nx">session</span><span class="p">,</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="p">}){</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">token</span><span class="p">.</span><span class="nx">provider</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">token</span><span class="p">.</span><span class="nx">sub</span><span class="p">){</span>
+<span class="w">          </span><span class="nx">session</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">token</span><span class="p">.</span><span class="nx">provider</span><span class="si">}</span><span class="sb">_</span><span class="si">${</span><span class="nx">token</span><span class="p">.</span><span class="nx">sub</span><span class="si">}</span><span class="sb">`</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">session</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// page.tsx等では下記のものを使用してログイン情報を取得・削除する</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">handlers</span><span class="p">,</span><span class="w"> </span><span class="nx">auth</span><span class="p">,</span><span class="w"> </span><span class="nx">signIn</span><span class="p">,</span><span class="w"> </span><span class="nx">signOut</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">NextAuth</span><span class="p">(</span><span class="nx">config</span><span class="p">);</span>
 </code></pre></div>
 
 
