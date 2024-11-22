@@ -1281,6 +1281,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dockerfastapi-x-react-x-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerテンプレ(FastAPI x React x PostgreSQL)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1504,6 +1513,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dockerfastapi-x-react-x-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerテンプレ(FastAPI x React x PostgreSQL)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1588,6 +1606,69 @@ Dockerコンテナ内で<code>nginx</code>を立ち上げて、その出口は<c
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>test-postgres<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>postgres<span class="w"> </span>-d<span class="w"> </span>postgres
 </code></pre></div>
 <a href="https://hub.docker.com/_/postgres">ポスグレの公式イメージ</a></p>
+<h2 id="dockerfastapi-x-react-x-postgresql">Dockerテンプレ(FastAPI x React x PostgreSQL)<a class="headerlink" href="#dockerfastapi-x-react-x-postgresql" title="Permanent link">&para;</a></h2>
+<p><strong>フロントエンド Dockerfile</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">node:14</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>install
+<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>build
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;npm&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;start&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>バックエンド Dockerfile</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.10.6</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>requirements.txt
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--reload&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--port&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;8000&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p><strong>docker-compose.yaml</strong></p>
+<div class="highlight"><pre><span></span><code># local
+version: &quot;3&quot;
+services:
+  db:
+    image: postgres:15
+    volumes:
+      - ./app/db/postgresql/data:/var/lib/postgresql/data
+      - ./app/db/postgres:/docker-entrypoint-initdb.d
+    ports:
+      - &quot;5432:5432&quot;
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --locale=C
+
+  app-backend:
+    build:
+      context: ./backend-workfoler-name
+    ports:
+      - &quot;8000:8000&quot;
+    depends_on:
+      - db
+    volumes:
+      - ./backend-workfoler-name:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
+
+  app-frontend:
+    build:
+      context: ./frontend-workfoler-name
+    ports:
+      - &quot;80:80&quot;
+    volumes:
+      - ./frontend-workfoler-name:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production
+      - CHOKIDAR_USEPOLLING=true
+    command: [&quot;serve&quot;, &quot;-s&quot;, &quot;build&quot;, &quot;-l&quot;, &quot;80&quot;]
+
+volumes:
+  postgres_data:
+</code></pre></div>
 
 
 
