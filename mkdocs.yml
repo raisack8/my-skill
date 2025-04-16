@@ -99,4 +99,6 @@ nav:
   # - ハック(準備中):
   #   - VSCODE: hack-vscode-01.md
   - ネットワーク: network/network.md
+  - Git: 
+    - rebase: git/rebase.md
   - 良記事: books.md
