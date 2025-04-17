@@ -102,3 +102,8 @@ nav:
   - Git: 
     - rebase: git/rebase.md
   - 良記事: books.md
+  - 経済:
+    - 投資ポートフォリオ:
+      - プロンプト: echo/invest/portfolio/prompt.md
+      - 2025/04/20: echo/invest/portfolio/invest-250417.md
+    - 学習: echo/ec-01.md
