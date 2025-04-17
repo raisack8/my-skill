@@ -104,4 +104,5 @@ nav:
   - 良記事: books.md
   - 経済:
     - 投資ポートフォリオ:
+      - プロンプト: invest/portfolio/prompt.md
       - 2025/04/20: invest/portfolio/invest-250417.md
