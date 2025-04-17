@@ -102,3 +102,6 @@ nav:
   - Git: 
     - rebase: git/rebase.md
   - 良記事: books.md
+  - 経済:
+    - 投資ポートフォリオ:
+      - 2025/04/20: invest/portfolio/invest-250417.md
