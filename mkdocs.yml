@@ -45,7 +45,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - QuickStart:
+  - ☆ QuickStart:
     - Next.js: 
       - plop(コンポーネントテンプレート): quickstart/nextjs/plop.md
     - Python:
