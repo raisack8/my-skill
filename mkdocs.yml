@@ -44,66 +44,72 @@ markdown_extensions:
   - meta
 
 nav:
-  - ホーム: index.md
-  - TypeScript:
-    - javascriptの歴史: ts/history.md
-    - Next.js:
-      - はじめに: ts/nextjs/ne-first.md
-      - チュートリアル: 
-        - 特徴: ts/nextjs/ne-about.md
-        - レイアウトとページ: ts/nextjs/ne-pages.md
-        - DBの設定(Vercel): ts/nextjs/ne-db.md
-        - レンダリング: ts/nextjs/ne-render.md
-        - 検索: ts/nextjs/ne-search.md
-        - エラーハンドリング: ts/nextjs/ne-error.md
-        - 認証: ts/nextjs/ne-auth.md
-        - 環境構築: ts/nextjs/ne-env.md
-        - Vercel: ts/nextjs/ne-vercle.md
-      - 実践:
-        - NextUI: ts/nextjs/practice/ne-01.md
-        - こんなときどうする: ts/nextjs/practice/ne-02.md
-      - use client: ts/nextjs/ne-useclient.md
-      - use server: ts/nextjs/ne-useserver.md
-      - NextAuth.js: ts/nextjs/auth/ne-auth-01.md
-      - 参考サイト: ts/nextjs/site.md
-    - ORM:
-      - Prisma:
-        - 使い方: ts/orm/prisma/pr-01.md
-      - Drizzle:
-        - クイックスタート: ts/orm/drizzle/dr-01.md
-    - Store:
-      - Redux:
-        - クイックスタート: ts/store/redux/rd-01.md
-  - Python: 
-    - FastAPI: python/py-fastapi-01.md
-    - Django: python/py-django-01.md
-    - Selenium: python/py-sele.md
-    # - pytest(準備中): python/py-pytest-01.md
-    # - subprocess(準備中): python/py-subpro-01.md
-    # - pathlib(準備中): python/py-pathlib-01.md
-    # - mkdocs(準備中): python/py-mkdocs-01.md
-  - Docker: 
-    - はじめに: docker/dc-01.md
-    - Dockerfile: docker/dc-02.md
-  - GCP: gcp/gcp-first-01.md
-  - Figma: 
-    - 使い方: fg/fg-01.md
-    - コンポーネント: fg/fg-02.md
-
-  # - bat(準備中): bat-01.md
-  # - PostgreSQL(準備中): psql-01.md
-  # - AWS(準備中): aws-first-01.md
-  # - Stable Diffusion(準備中):
-  #   - 基本的な使い方: stablediffusion/sd-first-01.md
-  #   - プロンプト: stablediffusion/sd-prompt-01.md
-  # - ハック(準備中):
-  #   - VSCODE: hack-vscode-01.md
-  - ネットワーク: network/network.md
-  - Git: 
-    - rebase: git/rebase.md
-  - 良記事: books.md
-  - 経済:
-    - 投資ポートフォリオ:
-      - プロンプト: echo/invest/portfolio/prompt.md
-      - 2025/04/20: echo/invest/portfolio/invest-250417.md
-    - 学習: echo/ec-01.md
+  - Home: index.md
+  - ☆ QuickStart:
+    - Next.js: 
+      - plop(コンポーネントテンプレート): quickstart/nextjs/plop.md
+    - Python:
+      - uv: quickstart/python/uv.md
+    - claude Code: 
+      - cmd: quickstart/claude/cmd.md
+      - prompt:
+        - 01_CLAUDE.md: quickstart/claude/prompt/01_CLAUDE.md
+  - My Works:
+    - 準備中: hoge.md
+  - Programings:
+    - TypeScript:
+      # - javascriptの歴史: ts/history.md
+      - Next.js:
+        - はじめに: ts/nextjs/ne-first.md
+        - チュートリアル: 
+          - 特徴: ts/nextjs/ne-about.md
+          - レイアウトとページ: ts/nextjs/ne-pages.md
+          - DBの設定(Vercel): ts/nextjs/ne-db.md
+          - レンダリング: ts/nextjs/ne-render.md
+          - 検索: ts/nextjs/ne-search.md
+          - エラーハンドリング: ts/nextjs/ne-error.md
+          - 認証: ts/nextjs/ne-auth.md
+          - 環境構築: ts/nextjs/ne-env.md
+          - Vercel: ts/nextjs/ne-vercle.md
+        - 実践:
+          - NextUI: ts/nextjs/practice/ne-01.md
+          - こんなときどうする: ts/nextjs/practice/ne-02.md
+        - use client: ts/nextjs/ne-useclient.md
+        - use server: ts/nextjs/ne-useserver.md
+        - NextAuth.js: ts/nextjs/auth/ne-auth-01.md
+        - 参考サイト: ts/nextjs/site.md
+      - ORM:
+        - Prisma:
+          - 使い方: ts/orm/prisma/pr-01.md
+        - Drizzle:
+          - クイックスタート: ts/orm/drizzle/dr-01.md
+      # - Store:
+      #   - Redux:
+      #     - クイックスタート: ts/store/redux/rd-01.md
+    - Python: 
+      - FastAPI: python/py-fastapi-01.md
+      - Django: python/py-django-01.md
+      - Selenium: python/py-sele.md
+      # - pytest(準備中): python/py-pytest-01.md
+      # - subprocess(準備中): python/py-subpro-01.md
+      # - pathlib(準備中): python/py-pathlib-01.md
+      # - mkdocs(準備中): python/py-mkdocs-01.md
+  # - Infrastructures:
+  #   - Docker: 
+  #     - はじめに: docker/dc-01.md
+  #     - Dockerfile: docker/dc-02.md
+  #   - GCP: gcp/gcp-first-01.md
+  #   - ネットワーク: network/network.md
+  #   - Git: 
+  #     - rebase: git/rebase.md
+  - Designs:
+    - Figma: 
+      - 使い方: fg/fg-01.md
+      - コンポーネント: fg/fg-02.md
+  - Others:
+    - 良記事: books.md
+    # - 経済:
+    #   - 投資ポートフォリオ:
+    #     - プロンプト: echo/invest/portfolio/prompt.md
+    #     - 2025/04/20: echo/invest/portfolio/invest-250417.md
+    #   - 学習: echo/ec-01.md

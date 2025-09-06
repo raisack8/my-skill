@@ -9,6 +9,10 @@ mkdocs serve
 mkdocs gh-deploy
 ```
 
+## uv
+
+
+
 ## 記法
 [MkDocsで使えるMarkdownサンプル](https://caldia.tuzikaze.com/mkdocs/markdown-sample/)
 
