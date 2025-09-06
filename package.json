@@ -1,0 +1,7 @@
+{
+  "name": "my-skill",
+  "scripts": {
+    "serve": "uv run mkdocs serve",
+    "deploy": "uv run mkdocs gh-deploy"
+  }
+}
