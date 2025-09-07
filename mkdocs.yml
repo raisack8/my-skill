@@ -1,9 +1,9 @@
 site_name: My docs
 site_description: My docs
 site_author: raisack
-site_url: https://raisack8.github.io/my-docs/
-repo_name: raisack8/my-docs
-repo_url: https://github.com/raisack8/my-docs
+site_url: https://raisack8.github.io/my-skill/
+repo_name: raisack8/my-skill
+repo_url: https://github.com/raisack8/my-skill
 copyright: Copyright &copy 2024 raisack
 
 theme:
