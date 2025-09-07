@@ -311,7 +311,7 @@
             
   
   <span class="md-ellipsis">
-    QuickStart
+    ☆ QuickStart
   </span>
   
 
@@ -321,7 +321,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            QuickStart
+            ☆ QuickStart
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1716,16 +1716,16 @@
   
 
 
-<h1 id="nextjs">Next.jsで使えるテンプレートの作り方<a class="headerlink" href="#nextjs" title="Permanent link">&para;</a></h1>
+<h1 id="nextjs">Next.js で使えるテンプレートの作り方<a class="headerlink" href="#nextjs" title="Permanent link">&para;</a></h1>
 <ul>
-<li>
-<p>plopインストール
+<li>plop インストール</li>
+</ul>
 <div class="highlight"><pre><span></span><code>pnpm<span class="w"> </span>add<span class="w"> </span>-D<span class="w"> </span>plop
 <span class="c1"># 開発時のみ必要な場合</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><code>package.json</code> に <code>"type": "module"</code> を追加
+</code></pre></div>
+<ul>
+<li><code>package.json</code> に <code>"type": "module"</code> を追加</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web-dev-utils&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.1.0&quot;</span><span class="p">,</span>
@@ -1733,115 +1733,170 @@
 <span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;module&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// このように追加</span>
 <span class="w">  </span><span class="err">・・・</span>
 <span class="p">}</span>
-</code></pre></div></p>
-</li>
-<li>
-<p><code>plopfile.js</code> をワークディレクトリ直下に作成し、以下のように内容を書く。</p>
-</li>
+</code></pre></div>
+<ul>
+<li><code>plopfile.js</code> をワークディレクトリ直下に作成し、以下のように内容を書く。</li>
 </ul>
 <details>
 <summary>コードはこちらです。</summary>
+
 <div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">plop</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Server Component Generator</span>
-<span class="w">  </span><span class="nx">plop</span><span class="p">.</span><span class="nx">setGenerator</span><span class="p">(</span><span class="s1">&#39;server-component&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Next.js Server Component&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">plop</span><span class="p">.</span><span class="nx">setGenerator</span><span class="p">(</span><span class="s2">&quot;server-component&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Next.js Server Component&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">prompts</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;input&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Component name:&#39;</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Component name:&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;input&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;path&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Component path (default: src/components):&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;src/components&#39;</span>
-<span class="w">      </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;path&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Component path (default: src/components):&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;src/components&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;add&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{{path}}/{{pascalCase name}}.tsx&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">templateFile</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;templates/server-component.hbs&#39;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;{{path}}/{{pascalCase name}}.tsx&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">templateFile</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;templates/server-component.hbs&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">],</span>
 <span class="w">  </span><span class="p">});</span>
 
 <span class="w">  </span><span class="c1">// Client Component Generator</span>
-<span class="w">  </span><span class="nx">plop</span><span class="p">.</span><span class="nx">setGenerator</span><span class="p">(</span><span class="s1">&#39;client-component&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Next.js Client Component&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">plop</span><span class="p">.</span><span class="nx">setGenerator</span><span class="p">(</span><span class="s2">&quot;client-component&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Next.js Client Component&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">prompts</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;input&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Component name:&#39;</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Component name:&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;input&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;path&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Component path (default: src/components):&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;src/components&#39;</span>
-<span class="w">      </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;path&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Component path (default: src/components):&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;src/components&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;add&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{{path}}/{{pascalCase name}}.tsx&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">templateFile</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;templates/client-component.hbs&#39;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;{{path}}/{{pascalCase name}}.tsx&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">templateFile</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;templates/client-component.hbs&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">],</span>
 <span class="w">  </span><span class="p">});</span>
 
 <span class="w">  </span><span class="c1">// Page Component Generator</span>
-<span class="w">  </span><span class="nx">plop</span><span class="p">.</span><span class="nx">setGenerator</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Next.js Page Component&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">plop</span><span class="p">.</span><span class="nx">setGenerator</span><span class="p">(</span><span class="s2">&quot;page-component&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Next.js Page Component&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">prompts</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;input&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;name&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Page name:&#39;</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Page name:&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;input&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;path&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Page path (default: src/app):&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;src/app&#39;</span>
-<span class="w">      </span><span class="p">}</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;path&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Page path (default: src/app):&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;src/app&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="nx">actions</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;add&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{{path}}/{{kebabCase name}}/page.tsx&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">templateFile</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;templates/page.hbs&#39;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;add&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;{{path}}/{{kebabCase name}}/page.tsx&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">templateFile</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;templates/page.hbs&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">],</span>
 <span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
+
+<ul>
+<li><code>package.json</code>に以下のようにコマンドを登録する</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;gen:server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plop server-component&quot;</span><span class="p">,</span>
+<span class="nt">&quot;gen:client&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plop client-component&quot;</span><span class="p">,</span>
+<span class="nt">&quot;gen:page&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plop page&quot;</span>
+</code></pre></div>
+<ul>
+<li>以下のようにコンポーネントのテンプレートファイルを作成する</li>
+</ul>
+<details>
+<summary>client-component.hbs</summary>
+
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;use client&#39;</span><span class="p">;</span>
+
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kr">interface</span><span class="w"> </span><span class="p">{{</span><span class="nx">pascalCase</span><span class="w"> </span><span class="nx">name</span><span class="p">}}</span><span class="nx">Props</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">children</span><span class="o">?:</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">{{</span><span class="nx">pascalCase</span><span class="w"> </span><span class="nx">name</span><span class="p">}}({</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="p">{{</span><span class="nx">pascalCase</span><span class="w"> </span><span class="nx">name</span><span class="p">}}</span><span class="nx">Props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="p">{</span><span class="nx">children</span><span class="p">}</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
+
+<details>
+<summary>server-component.hbs</summary>
+
+<div class="highlight"><pre><span></span><code><span class="kr">interface</span><span class="w"> </span><span class="p">{{</span><span class="nx">pascalCase</span><span class="w"> </span><span class="nx">name</span><span class="p">}}</span><span class="nx">Props</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">children</span><span class="o">?:</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">ReactNode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">{{</span><span class="nx">pascalCase</span><span class="w"> </span><span class="nx">name</span><span class="p">}}({</span><span class="w"> </span><span class="nx">children</span><span class="w"> </span><span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="p">{{</span><span class="nx">pascalCase</span><span class="w"> </span><span class="nx">name</span><span class="p">}}</span><span class="nx">Props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="p">{</span><span class="nx">children</span><span class="p">}</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</details>
+
+<details>
+<summary>page-component.hbs</summary>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">{{</span><span class="nx">pascalCase</span><span class="w"> </span><span class="nx">name</span><span class="p">}}</span><span class="nx">Page</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;p-8&quot;</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="p">{{</span><span class="nx">name</span><span class="p">}}</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">  </span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 </details>
 
-<ul>
-<li><code>package.json</code>に以下のようにコマンドを登録する
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;gen:server&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plop server-component&quot;</span><span class="p">,</span>
-<span class="nt">&quot;gen:client&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plop client-component&quot;</span><span class="p">,</span>
-<span class="nt">&quot;gen:page&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;plop page&quot;</span>
-</code></pre></div></li>
-</ul>
-<p>後は <code>pnpm run gen:server</code> のようにコマンドを入力すると、対話形式で会話が出来るので、以下のように入力する。
+<p>後は <code>pnpm run gen:server</code> のようにコマンドを入力すると、対話形式で会話が出来るので、以下のように入力する。</p>
 <div class="highlight"><pre><span></span><code>pnpm<span class="w"> </span>run<span class="w"> </span>gen:client
 
 ?<span class="w"> </span>Component<span class="w"> </span>name:<span class="w"> </span>Sidebar<span class="w"> </span><span class="c1"># 作成したいコンポーネント名を入力する</span>
 ?<span class="w"> </span>Component<span class="w"> </span>path<span class="w"> </span><span class="o">(</span>default:<span class="w"> </span>src/components<span class="o">)</span>:<span class="w"> </span>src/components<span class="w"> </span><span class="c1"># コンポーネントを配置するディレクトリを入力する。</span>
-✔<span class="w">  </span>++<span class="w"> </span>/src/components/Sidebar.tsx<span class="w"> </span>
-</code></pre></div></p>
-<p>pageコンポーネントの場合は <code>Component name</code> は入力不要。
+✔<span class="w">  </span>++<span class="w"> </span>/src/components/Sidebar.tsx
+</code></pre></div>
+<p>page コンポーネントの場合は <code>Component name</code> は入力不要。</p>
 <div class="highlight"><pre><span></span><code>pnpm<span class="w"> </span>run<span class="w"> </span>gen:page
 
 
 ?<span class="w"> </span>Page<span class="w"> </span>name:<span class="w"> </span><span class="c1"># 何も入力しない</span>
 ?<span class="w"> </span>Page<span class="w"> </span>path<span class="w"> </span><span class="o">(</span>default:<span class="w"> </span>src/app<span class="o">)</span>:<span class="w"> </span>src/app/test<span class="w"> </span><span class="c1"># コンポーネントを配置するディレクトリを入力する。</span>
-✔<span class="w">  </span>++<span class="w"> </span>/src/app/test/page.tsx<span class="w">    </span>
-</code></pre></div></p>
+✔<span class="w">  </span>++<span class="w"> </span>/src/app/test/page.tsx
+</code></pre></div>
 
 
 
