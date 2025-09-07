@@ -1,232 +1,232 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://raisack8.github.io/my-skill/</loc>
+         <loc>https://raisack8.github.io/my-docs/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/books/</loc>
+         <loc>https://raisack8.github.io/my-docs/books/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/docker/dc-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/docker/dc-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/docker/dc-02/</loc>
+         <loc>https://raisack8.github.io/my-docs/docker/dc-02/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/echo/ec-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/echo/ec-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/echo/invest/portfolio/invest-250417/</loc>
+         <loc>https://raisack8.github.io/my-docs/echo/invest/portfolio/invest-250417/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/echo/invest/portfolio/prompt/</loc>
+         <loc>https://raisack8.github.io/my-docs/echo/invest/portfolio/prompt/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/fg/fg-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/fg/fg-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/fg/fg-02/</loc>
+         <loc>https://raisack8.github.io/my-docs/fg/fg-02/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/gcp/gcp-first-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/gcp/gcp-first-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/git/rebase/</loc>
+         <loc>https://raisack8.github.io/my-docs/git/rebase/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/network/network/</loc>
+         <loc>https://raisack8.github.io/my-docs/network/network/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/python/py-django-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/python/py-django-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/python/py-fastapi-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/python/py-fastapi-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/python/py-mkdocs-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/python/py-mkdocs-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/python/py-pathlib-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/python/py-pathlib-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/python/py-pytest-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/python/py-pytest-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/python/py-sele/</loc>
+         <loc>https://raisack8.github.io/my-docs/python/py-sele/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/python/py-subpro-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/python/py-subpro-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/quickstart/claude/cmd/</loc>
+         <loc>https://raisack8.github.io/my-docs/quickstart/claude/cmd/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/quickstart/claude/prompt/01_CLAUDE/</loc>
+         <loc>https://raisack8.github.io/my-docs/quickstart/claude/prompt/01_CLAUDE/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/quickstart/nextjs/plop/</loc>
+         <loc>https://raisack8.github.io/my-docs/quickstart/nextjs/plop/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/quickstart/python/uv/</loc>
+         <loc>https://raisack8.github.io/my-docs/quickstart/python/uv/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/stablediffusion/sd-first-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/stablediffusion/sd-first-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/stablediffusion/sd-prompt-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/stablediffusion/sd-prompt-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/history/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/history/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-about/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-about/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-auth/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-auth/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-db/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-db/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-env/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-env/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-error/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-error/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-first/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-first/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-pages/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-pages/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-render/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-render/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-search/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-search/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-useclient/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-useclient/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-useserver/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-useserver/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/ne-vercle/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/ne-vercle/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/site/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/site/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/auth/ne-auth-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/auth/ne-auth-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/practice/ne-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/practice/ne-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/nextjs/practice/ne-02/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/nextjs/practice/ne-02/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/orm/drizzle/dr-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/orm/drizzle/dr-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/orm/prisma/pr-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/orm/prisma/pr-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/store/redux/rd-01/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/store/redux/rd-01/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://raisack8.github.io/my-skill/ts/type-script/ts-first/</loc>
+         <loc>https://raisack8.github.io/my-docs/ts/type-script/ts-first/</loc>
          <lastmod>2025-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
