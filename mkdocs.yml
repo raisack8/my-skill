@@ -54,8 +54,7 @@ nav:
           - cmd: quickstart/claude/cmd.md
           - prompt:
               - 01_CLAUDE.md: quickstart/claude/prompt/01_CLAUDE.md
-  - My Works:
-      - 準備中: my-works.md
+  - My Works: my-works.md
   - Programings:
       - TypeScript:
           # - javascriptの歴史: ts/history.md
