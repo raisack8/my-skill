@@ -55,10 +55,13 @@ nav:
           - prompt:
               - 01_CLAUDE.md: quickstart/claude/prompt/01_CLAUDE.md
   - My Works:
-      - 準備中: hoge.md
+      - 準備中: my-works.md
   - Programings:
       - TypeScript:
           # - javascriptの歴史: ts/history.md
+          - TypeScript:
+              - はじめに: ts/type-script/ts-01.md
+              - 小ネタ: ts/type-script/neta.md
           - Next.js:
               - はじめに: ts/nextjs/ne-first.md
               - チュートリアル:
