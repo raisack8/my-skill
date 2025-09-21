@@ -1,4 +1,5 @@
-console.log(typeof Date())
-console.log(Date())
-console.log(typeof new Date())
-console.log(new Date())
+function loggingIdentity(arg) {
+    console.log(arg.length); // Now we know it has a .length property, so no more error
+    return arg;
+}
+loggingIdentity({ length: 10, value: 3 });
