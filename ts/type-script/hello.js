@@ -1,5 +1,11 @@
-function loggingIdentity(arg) {
-    console.log(arg.length); // Now we know it has a .length property, so no more error
-    return arg;
-}
-loggingIdentity({ length: 10, value: 3 });
+var MyClass = /** @class */ (function () {
+    function MyClass() {
+    }
+    MyClass.printX = function () {
+        console.log(MyClass.x);
+    };
+    MyClass.x = 0;
+    return MyClass;
+}());
+console.log(MyClass.x);
+MyClass.printX();
