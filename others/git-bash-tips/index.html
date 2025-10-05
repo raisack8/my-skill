@@ -12,8 +12,10 @@
         <meta name="author" content="raisack">
       
       
-        <link rel="canonical" href="https://raisack8.github.io/my-skill/stablediffusion/sd-first-01/">
+        <link rel="canonical" href="https://raisack8.github.io/my-skill/others/git-bash-tips/">
       
+      
+        <link rel="prev" href="../books/">
       
       
       
@@ -22,7 +24,7 @@
     
     
       
-        <title>Stable Diffusion - My docs</title>
+        <title>エクスプローラーからGitbashを開く方法 - My docs</title>
       
     
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stable-diffusion" class="md-skip">
+        <a href="#gitbash" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stable Diffusion
+              エクスプローラーからGitbashを開く方法
             
           </span>
         </div>
@@ -1666,17 +1668,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1690,7 +1694,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Others
@@ -1704,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../others/books/" class="md-nav__link">
+      <a href="../books/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1722,10 +1726,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../others/git-bash-tips/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1734,6 +1747,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1782,7 +1796,24 @@
   
 
 
-<h1 id="stable-diffusion">Stable Diffusion<a class="headerlink" href="#stable-diffusion" title="Permanent link">&para;</a></h1>
+<h1 id="gitbash">エクスプローラーから Gitbash を開く方法<a class="headerlink" href="#gitbash" title="Permanent link">&para;</a></h1>
+<p>任意の場所に <code>git-bash-here.reg</code> ファイル(名前は任意)を作成し、以下の内容を書き込む。</p>
+<div class="highlight"><pre><span></span><code>Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\git_bash]
+@=&quot;Git Bash Here&quot;
+&quot;Icon&quot;=&quot;C:\\Program Files\\Git\\git-bash.exe&quot;
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\git_bash\command]
+@=&quot;\&quot;C:\\Program Files\\Git\\git-bash.exe\&quot; \&quot;--cd=%V\&quot;&quot;
+</code></pre></div>
+<p>それを実行したら以下のようにカレントディレクトリを Gitbash で開くことができる。</p>
+<p><img alt="alt text" src="../images/gitbash-01.png" /></p>
+<p>設定を元に戻したい場合は <code>remove-git-bash.reg</code> を作成し、以下を書き込み実行する。</p>
+<div class="highlight"><pre><span></span><code>Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\git_bash]
+</code></pre></div>
 
 
 
