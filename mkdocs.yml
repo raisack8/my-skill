@@ -110,7 +110,8 @@ nav:
           - 使い方: fg/fg-01.md
           - コンポーネント: fg/fg-02.md
   - Others:
-      - 良記事: books.md
+      - 良記事: others/books.md
+      - エクスプローラーからGitbashを開く方法: others/git-bash-tips.md
     # - 経済:
     #   - 投資ポートフォリオ:
     #     - プロンプト: echo/invest/portfolio/prompt.md
