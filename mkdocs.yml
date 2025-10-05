@@ -112,6 +112,7 @@ nav:
   - Others:
       - 良記事: others/books.md
       - エクスプローラーからGitbashを開く方法: others/git-bash-tips.md
+      - Windowsの従来の右クリックメニュー: others/windows-menu.md
     # - 経済:
     #   - 投資ポートフォリオ:
     #     - プロンプト: echo/invest/portfolio/prompt.md
